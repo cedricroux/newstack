@@ -4,3 +4,13 @@
   <span>Name: </span><%= @current_user.name %><br/>
   <span>Admin: </span><%= @current_user.admin %>
 <% end %>
+
+
+<h1>Article Search</h1>
+
+<%= form_tag '#', :id => 'search' do %>
+  <%= search_field_tag :query, nil, :placeholder => 'News', :autofocus => true %>
+  <%= button_tag 'Search' %>
+<% end %>
+
+<div id="articles"></div>
