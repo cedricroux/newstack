@@ -1,0 +1,6 @@
+<h1>Newstack</h1>
+
+<% if @current_user.present? && @current_user.admin? %>
+  <span>Name: </span><%= @current_user.name %><br/>
+  <span>Admin: </span><%= @current_user.admin %>
+<% end %>
