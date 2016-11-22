@@ -11,15 +11,30 @@
   <div class="container">
 
     <nav>
-      <%= link_to 'Home', root_path %>
+      <%= link_to 'Newstack', root_path %>
+      <%= 'News' %>
+      <%= 'Twitter' %>
+      <%= 'Forum' %>
       <% if @current_user.present? %>
         <%= link_to 'Edit profile', edit_user_path %>
-        <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
+        <%= link_to "Log Out #{ @current_user.email }", login_path, :method => 'delete' %>
       <% else %>
-        <%= link_to 'Sign up', new_user_path %>
-        <%= link_to 'Sign in', login_path %>
+        <%= link_to 'Sign Up', new_user_path %>
+        <%= link_to 'Sign In', login_path %>
       <% end %>
     </nav>
+    <div>
+      <ul>
+        <li>ABC</li>
+        <li>BBC</li>
+        <li>Bloomberg</li>
+        <li>Buzzfeed</li>
+        <li>Financial Times</li>
+        <li>recode</li>
+        <li>The Economist</li>
+        <li>The Verge</li>
+      </ul>
+    </div>
 
     <% if flash[:message].present? %>
       <p><%= flash[:message] %></p>
