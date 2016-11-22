@@ -24,7 +24,7 @@ $(document).ready(function () {
   $('#search').on('submit', function (e) {
     e.preventDefault();
     var query = $('#query').val();
-    $('#articles').empty(); // Remove the previous search results.
+    $('#articlesFeed').empty(); // Remove the previous search results.
     searchArticle(query);
   });
 

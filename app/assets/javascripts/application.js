@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require underscore
 //= require_tree .
+
+$(document).ready(function() {
+  $('#abcCheckbox').click(function() {
+    var value = $(':checkbox:checked').val();
+      console.log(value);
+  });
+});
